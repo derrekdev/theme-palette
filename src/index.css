@@ -1,0 +1,120 @@
+/* start
+CSS custom reset
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+/* end
+CSS custom reset
+*/
+
+main {
+  height: 100dvh;
+  display: grid;
+  /* grid-template-columns: 50px auto 20px; */
+  grid-template-rows: 50px auto 20px;
+  grid-template-columns: minmax(150px, 30%) auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+section {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+input[type="text"],
+input[type="color"] {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #e7e4e4;
+  width: 100%;
+}
+
+button {
+  border-radius: 7px;
+}
+
+button:hover {
+  background-color: #c8c5c5;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bolder;
+}

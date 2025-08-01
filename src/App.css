@@ -1,0 +1,18 @@
+aside {
+  padding: 15px;
+}
+
+aside .color-container {
+  border: 1px solid black;
+  box-shadow: 5px 5px 15px black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  height: 500px;
+  padding: 20px;
+}
+
+aside .color-container .input-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
