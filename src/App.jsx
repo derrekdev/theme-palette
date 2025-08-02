@@ -1,4 +1,3 @@
-import "./App.css";
 import ColorContainer from "./components/ColorContainer/ColorContainer";
 import FooterContainer from "./components/FooterContainer/FooterContainer";
 import HeaderContainer from "./components/HeaderContainer/HeaderContainer";

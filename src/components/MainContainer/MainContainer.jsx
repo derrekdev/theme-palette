@@ -1,3 +1,15 @@
+import { useColor } from "../../store/storeColor";
+import WindowContainer from "./WindowContainer/WindowContainer";
+
 export default function MainContainer() {
-  return <section>Main container</section>;
+  const mainColor = useColor((state) => state.mainBgColor);
+  return (
+    <section
+      style={{
+        backgroundColor: mainColor,
+      }}
+    >
+      <WindowContainer />
+    </section>
+  );
 }

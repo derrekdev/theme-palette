@@ -1,0 +1,26 @@
+.inputBlock {
+  display: flex;
+}
+
+.inputBlock input[type="text"],
+.inputBlock input[type="color"],
+.inputBlock .toggleButton {
+  padding: 5px;
+  background-color: #e7e4e4;
+
+  height: 30px;
+}
+
+.inputBlock input[type="text"],
+.inputBlock input[type="color"] {
+  border-radius: 10px 0 0 10px;
+  width: 100%;
+}
+
+.inputBlock .toggleButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  width: 30px;
+}

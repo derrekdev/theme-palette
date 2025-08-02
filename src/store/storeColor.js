@@ -1,15 +1,15 @@
 import { create } from "zustand";
 
-const useColor = create((set) => ({
-  mainBgColor: "#fff",
-  windowBgColor: "#fff",
-  windowBorderColor: "#000",
+export const useColor = create((set) => ({
+  mainBgColor: "#ffffff",
+  windowBgColor: "#ffffff",
+  windowBorderColor: "#000000",
 
   reset: () => {
     set(() => ({
-      mainBgColor: "#fff",
-      windowBgColor: "#fff",
-      windowBorderColor: "#000",
+      mainBgColor: "#ffffff",
+      windowBgColor: "#ffffff",
+      windowBorderColor: "#000000",
     }));
   },
 
