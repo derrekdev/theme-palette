@@ -3,7 +3,7 @@ import { AiOutlineNumber } from "react-icons/ai";
 import { IoIosColorPalette } from "react-icons/io";
 import "../../styles/inputColor.css";
 
-export default function InputColor(
+export default function inputColor(
   { labelText = "Color", handleChange },
   props
 ) {
