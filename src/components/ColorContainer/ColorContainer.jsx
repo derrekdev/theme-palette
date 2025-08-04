@@ -1,6 +1,6 @@
 import { useColor } from "../../store/storeColor";
 import "../../styles/colorContainer.css";
-import InputColor from "../ui/inputColor";
+import InputColor from "../InputColor";
 
 export default function ColorContainer() {
   const reset = useColor((state) => state.reset);
