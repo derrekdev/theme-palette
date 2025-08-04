@@ -1,3 +1,7 @@
 export default function HeaderContainer() {
-  return <header>Header</header>;
+  return (
+    <header>
+      <h1>Theme Palette</h1>
+    </header>
+  );
 }

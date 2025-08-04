@@ -47,7 +47,7 @@ export default function FormContainer() {
           <input
             type="submit"
             style={{
-              backgroundColor: formColors.inputBgColor,
+              backgroundColor: formColors.inputButtonColor,
               borderColor: formColors.inputBorderColor,
               color: formColors.inputTextColor,
             }}

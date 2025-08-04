@@ -7,50 +7,148 @@ export default function ColorContainer() {
   const applyAllBg = useColor((state) => state.applyAllBg);
   const applyAllBorder = useColor((state) => state.applyAllBorder);
   const applyAllText = useColor((state) => state.applyAllText);
+  const applyMainOnlyBg = useColor((state) => state.applyMainOnlyBg);
+  const updateWindowProperty = useColor((state) => state.updateWindowProperty);
+  const updateFormProperty = useColor((state) => state.updateFormProperty);
 
   return (
     <aside>
-      <div className="color-container">
-        <div className="input-item">
-          <label htmlFor="resetButton">Reset Color</label>
+      <form className="color-container">
+        <div className="color-header">
+          <h2>Update Color</h2>
+          <p>Select you prefered color below</p>
+        </div>
+        <div className="form-container">
+          <fieldset>
+            <legend>All</legend>
+            <div className="input-item">
+              <InputColor
+                labelText="Background"
+                handleChange={(e) => applyAllBg(e.target.value)}
+              />
+            </div>
+            <div className="input-item">
+              <InputColor
+                labelText="Border"
+                handleChange={(e) => applyAllBorder(e.target.value)}
+              />
+            </div>
+            <div className="input-item">
+              <InputColor
+                labelText="Text"
+                handleChange={(e) => applyAllText(e.target.value)}
+              />
+            </div>
+            <div className="input-item">
+              <InputColor
+                labelText="Background Main Only"
+                handleChange={(e) => applyMainOnlyBg(e.target.value)}
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Card Window</legend>
+            <div className="input-item">
+              <InputColor
+                labelText="Background"
+                handleChange={(e) =>
+                  updateWindowProperty("bgColor", e.target.value)
+                }
+              />
+            </div>
+
+            <div className="input-item">
+              <InputColor
+                labelText="Border"
+                handleChange={(e) =>
+                  updateWindowProperty("borderColor", e.target.value)
+                }
+              />
+            </div>
+
+            <div className="input-item">
+              <InputColor
+                labelText="Text"
+                handleChange={(e) =>
+                  updateWindowProperty("textColor", e.target.value)
+                }
+              />
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Form</legend>
+            <div className="input-item">
+              <InputColor
+                labelText="Background"
+                handleChange={(e) =>
+                  updateFormProperty("bgColor", e.target.value)
+                }
+              />
+            </div>
+
+            <div className="input-item">
+              <InputColor
+                labelText="Border"
+                handleChange={(e) =>
+                  updateFormProperty("borderColor", e.target.value)
+                }
+              />
+            </div>
+
+            <div className="input-item">
+              <InputColor
+                labelText="Text"
+                handleChange={(e) =>
+                  updateFormProperty("textColor", e.target.value)
+                }
+              />
+            </div>
+            <div className="input-item">
+              <InputColor
+                labelText="Input Background Color"
+                handleChange={(e) =>
+                  updateFormProperty("inputBgColor", e.target.value)
+                }
+              />
+            </div>
+            <div className="input-item">
+              <InputColor
+                labelText="Input Border"
+                handleChange={(e) =>
+                  updateFormProperty("inputBorderColor", e.target.value)
+                }
+              />
+            </div>
+            <div className="input-item">
+              <InputColor
+                labelText="Input Text"
+                handleChange={(e) =>
+                  updateFormProperty("inputTextColor", e.target.value)
+                }
+              />
+            </div>
+            <div className="input-item">
+              <InputColor
+                labelText="Input Button"
+                handleChange={(e) =>
+                  updateFormProperty("inputButtonColor", e.target.value)
+                }
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div className="color-footer">
           <button
+            type="reset"
             id="resetButton"
             onClick={() => {
               reset();
-              // console.log("reset", mainBgColor);
             }}
           >
             Reset All
           </button>
         </div>
-        {/* <div className="input-item">
-          <label htmlFor="mainBgColor">Main Color</label>
-          <input
-            id="mainBgColor"
-            type="color"
-            placeholder="ABC456"
-            value="#fff000"
-          />
-        </div> */}
-        <div className="input-item">
-          <InputColor
-            labelText="Background Color"
-            handleChange={(e) => applyAllBg(e.target.value)}
-          />
-        </div>
-        <div className="input-item">
-          <InputColor
-            labelText="Border Color"
-            handleChange={(e) => applyAllBorder(e.target.value)}
-          />
-        </div>
-        <div className="input-item">
-          <InputColor
-            labelText="Text Color"
-            handleChange={(e) => applyAllText(e.target.value)}
-          />
-        </div>
-      </div>
+      </form>
     </aside>
   );
 }

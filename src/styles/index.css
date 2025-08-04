@@ -73,13 +73,15 @@ CSS custom reset
 main {
   min-height: 100dvh;
   display: grid;
-  /* grid-template-columns: 50px auto 20px; */
   grid-template-rows: 50px auto 20px;
   grid-template-columns: minmax(150px, 30%) auto;
   grid-template-areas:
     "header header"
     "sidebar main"
     "footer footer";
+
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 header {
@@ -92,6 +94,7 @@ aside {
 
 section {
   grid-area: main;
+  padding: 0 20px;
 }
 
 footer {
@@ -115,8 +118,25 @@ button:hover {
 }
 
 label {
-  font-size: 0.9rem;
-  font-weight: bolder;
+  font-size: 0.8rem;
+  /* font-weight: 400; */
+}
+
+header,
+footer {
+  background-color: #6c757d;
+  height: fit-content;
+}
+header {
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+footer {
+  padding: 5px 20px;
 }
 
 .cardContainer,
@@ -130,4 +150,32 @@ label {
 
 input:focus {
   outline: none;
+}
+
+.form-container form,
+.cardContainer .cardBlock {
+  max-width: 400px;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 2px;
+  border-style: solid;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 0 auto;
+  }
+
+  .form-container form,
+  .cardContainer .cardBlock {
+    /* max-width: 800px; */
+    width: 100%;
+    min-width: 500px;
+  }
 }

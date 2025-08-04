@@ -73,54 +73,83 @@ export const useColor = create((set, get) => ({
     }));
   },
 
-  applyAllBg: (bgColor) => {
+  applyAllBg: (colorValue) => {
     set((state) => ({
-      mainBgColor: bgColor,
-      windowBgColor: bgColor,
-      formBgColor: bgColor,
-      formInputBgColor: bgColor,
+      mainBgColor: colorValue,
 
       window: {
         ...state.window,
-        bgColor: bgColor,
+        bgColor: colorValue,
       },
 
       form: {
         ...state.form,
-        bgColor: bgColor,
-        inputBgColor: bgColor,
-        inputButtonColor: bgColor,
+        bgColor: colorValue,
+        inputBgColor: colorValue,
+        inputButtonColor: colorValue,
       },
     }));
   },
 
-  applyAllBorder: (borderColor) => {
+  applyMainOnlyBg: (colorValue) => {
+    set((state) => ({
+      mainBgColor: colorValue,
+    }));
+  },
+
+  applyAllBorder: (borderColorValue) => {
     set((state) => ({
       window: {
         ...state.window,
-        borderColor: borderColor,
+        borderColor: borderColorValue,
       },
 
       form: {
         ...state.form,
-        borderColor: borderColor,
-        inputBorderColor: borderColor,
+        borderColor: borderColorValue,
+        inputBorderColor: borderColorValue,
       },
     }));
   },
 
-  applyAllText: (textColor) => {
+  applyAllText: (textColorValue) => {
     set((state) => ({
       window: {
         ...state.window,
-        textColor: textColor,
+        textColor: textColorValue,
       },
 
       form: {
         ...state.form,
-        textColor: textColor,
-        inputTextColor: textColor,
+        textColor: textColorValue,
+        inputTextColor: textColorValue,
+      },
+    }));
+  },
+  updateWindowProperty: (colorType, colorValue) => {
+    set((state) => ({
+      window: {
+        ...state.window,
+        [colorType]: colorValue,
+      },
+    }));
+  },
+  updateFormProperty: (colorType, colorValue) => {
+    set((state) => ({
+      form: {
+        ...state.form,
+        [colorType]: colorValue,
       },
     }));
   },
 }));
+
+// form: {
+//         bgColor: defaultBgColor,
+//         textColor: defaultTextColor,
+//         borderColor: defaultBorderColor,
+//         inputBgColor: defaultBgColor,
+//         inputTextColor: defaultTextColor,
+//         inputBorderColor: defaultBorderColor,
+//         inputButtonColor: defaultBgColor,
+//       },

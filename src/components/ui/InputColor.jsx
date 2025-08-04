@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { AiOutlineNumber } from "react-icons/ai";
 import { IoIosColorPalette } from "react-icons/io";
-import { useColor } from "../../store/storeColor";
 import "../../styles/inputColor.css";
 
 export default function InputColor(
@@ -9,15 +8,15 @@ export default function InputColor(
   props
 ) {
   const [inputType, setInputType] = useState("color");
-  const applyBorderColor = useColor((state) => state.applyAllBorder);
 
-  // console.log("applyBorderColor", applyBorderColor);
+  const num = (Math.random().toPrecision(3) * 10).toString();
+
   return (
     <>
-      <label htmlFor="mainBgColor">{labelText}</label>
+      <label htmlFor={`color-${num}`}>{labelText}</label>
       <div className="inputBlock">
         <input
-          id="mainBgColor"
+          id={`color-${num}`}
           type={inputType}
           placeholder="#ABC456"
           maxLength={7}
@@ -27,7 +26,8 @@ export default function InputColor(
         />
         <button
           className="toggleButton"
-          onClick={() => {
+          onClick={(e) => {
+            e.preventDefault();
             setInputType((type) => (type === "text" ? "color" : "text"));
           }}
         >

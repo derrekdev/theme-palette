@@ -3,21 +3,78 @@ aside {
 }
 
 aside .color-container {
-  position: fixed;
+  display: block;
+  position: relative;
   border: 1px solid black;
-  background-color: #fff;
+  background-color: #f8f8ff;
   box-shadow: 5px 5px 15px black;
   border-radius: 20px;
   padding: 10px 20px;
-  height: 500px;
-  max-width: 200px;
+  min-height: 500px;
+  max-height: 85dvh;
+  height: 100%;
+  max-width: 250px;
   width: 100%;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+aside .color-container .color-header,
+aside .color-container .color-footer {
+  padding: 0 10px;
+}
+
+aside .color-container .color-header,
+aside .color-container .color-footer {
+  background-color: #e9ecef;
+}
+
+aside .color-container .color-header p {
+  font-size: 0.7rem;
+}
+
+aside .color-container .color-footer button {
+  width: 100%;
+}
+
+aside .color-container .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 73dvh;
+  min-height: 500px;
+  height: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 15px 10px;
+}
+
+aside .color-container fieldset {
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+aside .color-container fieldset legend {
+  font-size: 1rem;
+  font-weight: bolder;
 }
 
 aside .color-container .input-item {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+}
+
+aside .color-container .color-footer {
+  padding: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+  aside .color-container {
+    position: fixed;
+  }
 }
