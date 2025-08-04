@@ -5,10 +5,6 @@ const defaultBorderColor = "#000000";
 const defaultTextColor = "#000000";
 
 export const useColor = create((set, get) => ({
-  // defaultBgColor: "#ffffff",
-  // defaultBorderColor: "#000000",
-  // defaultTextColor: "#000000",
-
   mainBgColor: defaultBgColor,
 
   window: {
@@ -26,18 +22,6 @@ export const useColor = create((set, get) => ({
     inputBorderColor: defaultBorderColor,
     inputButtonColor: defaultBgColor,
   },
-
-  // windowBgColor: defaultBgColor,
-  // windowTextColor: defaultTextColor,
-  // windowBorderColor: defaultBorderColor,
-
-  // formBgColor: defaultBgColor,
-  // formTextColor: defaultTextColor,
-  // formBorderColor: defaultBorderColor,
-  // formInputBgColor: defaultBgColor,
-  // formInputTextColor: defaultTextColor,
-  // formInputBorderColor: defaultBorderColor,
-  // formInputButtonColor: defaultBgColor,
 
   reset: () => {
     set(() => ({
@@ -58,18 +42,6 @@ export const useColor = create((set, get) => ({
         inputBorderColor: defaultBorderColor,
         inputButtonColor: defaultBgColor,
       },
-
-      // windowBgColor: get().defaultBgColor,
-      // windowTextColor: get().defaultTextColor,
-      // windowBorderColor: get().defaultBorderColor,
-
-      // formBgColor: get().defaultBgColor,
-      // formTextColor: get().defaultTextColor,
-      // formBorderColor: get().defaultBorderColor,
-      // formInputBgColor: get().defaultBgColor,
-      // formInputTextColor: get().defaultTextColor,
-      // formInputButtonColor: get().defaultBgColor,
-      // formInputBorderColor: get().defaultBorderColor,
     }));
   },
 
@@ -143,13 +115,3 @@ export const useColor = create((set, get) => ({
     }));
   },
 }));
-
-// form: {
-//         bgColor: defaultBgColor,
-//         textColor: defaultTextColor,
-//         borderColor: defaultBorderColor,
-//         inputBgColor: defaultBgColor,
-//         inputTextColor: defaultTextColor,
-//         inputBorderColor: defaultBorderColor,
-//         inputButtonColor: defaultBgColor,
-//       },

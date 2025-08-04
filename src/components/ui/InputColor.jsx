@@ -21,7 +21,6 @@ export default function InputColor(
           placeholder="#ABC456"
           maxLength={7}
           onChange={handleChange}
-          // onChange={() => console.log("test")}
           {...props}
         />
         <button

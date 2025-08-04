@@ -1,5 +1,5 @@
 import { useColor } from "../../store/storeColor";
-import "../../styles/ColorContainer.css";
+import "../../styles/colorContainer.css";
 import InputColor from "../ui/inputColor";
 
 export default function ColorContainer() {

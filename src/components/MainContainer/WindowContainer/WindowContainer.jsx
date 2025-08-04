@@ -1,5 +1,5 @@
 import { useColor } from "../../../store/storeColor";
-import "../../../styles/WindowContainer.css";
+import "../../../styles/windowContainer.css";
 
 export default function WindowContainer() {
   const bgColor = useColor((state) => state.window.bgColor);
