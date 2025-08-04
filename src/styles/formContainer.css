@@ -1,0 +1,33 @@
+.form-container form {
+  width: 400px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-width: 2px;
+  border-style: solid;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 10px;
+}
+
+.form-container form .form-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  width: 100%;
+}
+
+.form-container form .form-item input {
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #e7e4e4;
+  width: 100%;
+  border-style: solid;
+  outline: none;
+}
+
+.form-container form .form-item span {
+  font-size: 3rem;
+}

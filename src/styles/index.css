@@ -71,7 +71,7 @@ CSS custom reset
 */
 
 main {
-  height: 100dvh;
+  min-height: 100dvh;
   display: grid;
   /* grid-template-columns: 50px auto 20px; */
   grid-template-rows: 50px auto 20px;
@@ -117,4 +117,17 @@ button:hover {
 label {
   font-size: 0.9rem;
   font-weight: bolder;
+}
+
+.cardContainer,
+.form-container {
+  width: 100%;
+  min-height: 80dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus {
+  outline: none;
 }

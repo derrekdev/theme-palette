@@ -3,7 +3,10 @@ import "../../styles/ColorContainer.css";
 import InputColor from "../ui/inputColor";
 
 export default function ColorContainer() {
-  const colorApplication = useColor();
+  const reset = useColor((state) => state.reset);
+  const applyAllBg = useColor((state) => state.applyAllBg);
+  const applyAllBorder = useColor((state) => state.applyAllBorder);
+  const applyAllText = useColor((state) => state.applyAllText);
 
   return (
     <aside>
@@ -13,11 +16,11 @@ export default function ColorContainer() {
           <button
             id="resetButton"
             onClick={() => {
-              colorApplication.reset;
-              console.log("reset", colorApplication.mainBgColor);
+              reset();
+              // console.log("reset", mainBgColor);
             }}
           >
-            Reset
+            Reset All
           </button>
         </div>
         {/* <div className="input-item">
@@ -31,16 +34,20 @@ export default function ColorContainer() {
         </div> */}
         <div className="input-item">
           <InputColor
-            labelText="Main Color"
-            handleChange={(e) => colorApplication.applyAllBg(e.target.value)}
+            labelText="Background Color"
+            handleChange={(e) => applyAllBg(e.target.value)}
           />
         </div>
         <div className="input-item">
           <InputColor
             labelText="Border Color"
-            handleChange={(e) =>
-              colorApplication.applyAllBorder(e.target.value)
-            }
+            handleChange={(e) => applyAllBorder(e.target.value)}
+          />
+        </div>
+        <div className="input-item">
+          <InputColor
+            labelText="Text Color"
+            handleChange={(e) => applyAllText(e.target.value)}
           />
         </div>
       </div>

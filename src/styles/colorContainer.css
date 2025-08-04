@@ -3,12 +3,17 @@ aside {
 }
 
 aside .color-container {
+  position: fixed;
   border: 1px solid black;
+  background-color: #fff;
   box-shadow: 5px 5px 15px black;
   border-radius: 20px;
   padding: 10px 20px;
   height: 500px;
+  max-width: 200px;
+  width: 100%;
   padding: 20px;
+  margin-top: 50px;
 }
 
 aside .color-container .input-item {

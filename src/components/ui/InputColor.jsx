@@ -8,7 +8,7 @@ export default function InputColor(
   { labelText = "Color", handleChange },
   props
 ) {
-  const [inputType, setInputType] = useState("text");
+  const [inputType, setInputType] = useState("color");
   const applyBorderColor = useColor((state) => state.applyAllBorder);
 
   // console.log("applyBorderColor", applyBorderColor);
